@@ -6,3 +6,5 @@
 4. Apply app-meshed.yaml or app-meshed-2.yaml  
 5. Test the deployments with port-forward on the port 5001
 6. Test your non service with: curl localhost:5001
+
+# Enjoy it!
