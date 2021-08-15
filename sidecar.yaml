@@ -1,0 +1,14 @@
+apiVersion: apps.kruise.io/v1alpha1
+kind: SidecarSet
+metadata:
+  name: sidecarset
+spec:
+  selector:
+    matchLabels:
+      mesh: inject
+  containers:
+  - name: proxy
+    image: czdev/proxy
+  updateStrategy:
+    type: RollingUpdate
+  namespace: default

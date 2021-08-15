@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app-meshed
+  name: app-meshed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-meshed
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app-meshed
+        mesh: inject
+    spec:
+      containers:
+      - image: czdev/app
+        name: app
+        ports:
+        - containerPort: 5000
+status: {}
